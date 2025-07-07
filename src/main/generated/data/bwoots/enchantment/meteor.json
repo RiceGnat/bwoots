@@ -1,0 +1,77 @@
+{
+  "anvil_cost": 12,
+  "description": {
+    "translate": "enchantment.bwoots.meteor"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": 20.0,
+        "attribute": "minecraft:safe_fall_distance",
+        "id": "bwoots:safe_fall",
+        "operation": "add_value"
+      },
+      {
+        "amount": -0.2,
+        "attribute": "minecraft:fall_damage_multiplier",
+        "id": "bwoots:fall_damage",
+        "operation": "add_multiplied_base"
+      }
+    ],
+    "minecraft:location_changed": [
+      {
+        "effect": {
+          "type": "minecraft:attribute",
+          "amount": 1.0,
+          "attribute": "minecraft:gravity",
+          "id": "bwoots:gravity",
+          "operation": "add_multiplied_total"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "flags": {
+              "is_flying": false,
+              "is_on_ground": false,
+              "is_sneaking": true,
+              "is_swimming": false
+            }
+          }
+        }
+      },
+      {
+        "effect": {
+          "type": "bwoots:flame_particles"
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "flags": {
+              "is_flying": false,
+              "is_on_ground": false,
+              "is_sneaking": true,
+              "is_swimming": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  "exclusive_set": "#bwoots:exclusive_set/feet_fallin",
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 15
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 10
+  },
+  "slots": [
+    "feet"
+  ],
+  "supported_items": "#minecraft:enchantable/foot_armor",
+  "weight": 5
+}

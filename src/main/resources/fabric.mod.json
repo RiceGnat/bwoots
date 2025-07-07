@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "bwoots",
+	"version": "${version}",
+	"name": "Bwoots",
+	"description": "Boot enchantments to make falling funnier",
+	"authors": [
+		"RiceGnat"
+	],
+	"contact": {
+		"sources": "https://github.com/RiceGnat/bwoots"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/bwoots/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"moe.ricegnat.bwoots.Bwoots"
+		],
+		"fabric-datagen": [
+			"moe.ricegnat.bwoots.BwootsDataGenerator"
+		],
+		"client": [
+			"moe.ricegnat.bwoots.BwootsClient"
+		]
+	},
+	"mixins": [
+		"bwoots.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

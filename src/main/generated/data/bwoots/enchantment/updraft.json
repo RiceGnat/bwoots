@@ -1,0 +1,31 @@
+{
+  "anvil_cost": 12,
+  "description": {
+    "translate": "enchantment.bwoots.updraft"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": 30.0,
+        "attribute": "minecraft:safe_fall_distance",
+        "id": "bwoots:safe_fall",
+        "operation": "add_value"
+      }
+    ]
+  },
+  "exclusive_set": "#bwoots:exclusive_set/feet_fallin",
+  "max_cost": {
+    "base": 25,
+    "per_level_above_first": 15
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 5,
+    "per_level_above_first": 10
+  },
+  "slots": [
+    "feet"
+  ],
+  "supported_items": "#minecraft:enchantable/foot_armor",
+  "weight": 5
+}
